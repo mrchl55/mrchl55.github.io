@@ -42,12 +42,12 @@ const Movie = (props) => {
 
 
         }}>{props.index}. {props.title}{!isNaN(year) && `(${year})`}</span></div>
-        <div>{props.vote_average && <Flex sx={{
+        <div><Flex sx={{
             justifyContent: ['center'],
 
 
-        }}><span>{props.vote_average}</span><Image variant='small' src={starIcon}/></Flex>}</div>
-     <div className='details'>   {props.overview?.length && <Button
+        }}><span>{props.vote_average}</span><Image variant='small' src={starIcon}/></Flex></div>
+     <div className='details'>   {props.overview && <Button
             onClick={onShowDetailsClick}>{!areDetailsVisible ? 'Show details' : 'Hide details'}</Button>}
             <div>{areDetailsVisible && <div className='details-content' sx={{
                 p: 10,
